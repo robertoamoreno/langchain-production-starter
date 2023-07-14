@@ -24,9 +24,7 @@ def load_and_show_videos(instance):
                     "source": "https://www.youtube.com/watch?v="
                     + tag_key_to_value.get("source"),
                     "thumbnail_url": tag_key_to_value.get("thumbnail_url"),
-                    "Status": [tag.name for tag in file.tags if tag.kind == "status"][
-                        0
-                    ],
+                    "Status": [tag.name for tag in file.tags if tag.kind == "status"][0] if [tag.name for tag in file.tags if tag.kind == "status"] else None,
                 }
             )
     df = pd.DataFrame(videos)
