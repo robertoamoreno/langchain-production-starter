@@ -49,7 +49,7 @@ i = 0
 
 if st.button("Add 10 more video's", type="primary"):
     videos = load_and_show_videos(instance)
-    index_youtube_channel(st.session_state.channel_url, len(videos), 50)
+    index_youtube_channel(st.session_state.channel_url, len(videos), 100)
     i = 0
 
 while True:
